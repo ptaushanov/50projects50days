@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+
+:root {
+    --bg-color: #f6f7fb;
+    --step-incomplete: #e0e0e0;
+    --step-complete: #3498db;
+    --progress-text-color:#999999;
+    --progress-step-bg-color: #ffffff;
+    --btn-text-color: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: "Muli", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+}
+
+.progress-container {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 30px;
+    max-width: 100%;
+    width: 350px;
+}
+
+.progress-container::before {
+    content: '';
+    background-color: var(--step-incomplete);
+    transform: translateY(-50%);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 4px;
+    width: 100%;
+    z-index: -1;
+}
+
+.progress {
+    background-color: var(--step-complete);
+    transform: translateY(-50%);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 4px;
+    width: 0%;
+    z-index: -1;
+    transition: .4s ease;
+}
+
+.circle {
+    background-color: var(--progress-step-bg-color);
+    color: var(--progress-text-color);
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid var(--step-incomplete);
+    transition: .4s ease;
+}
+
+.circle.active {
+    border-color: var(--step-complete);
+}
+
+.btn {
+    background-color: var(--step-complete);
+    color: var(--btn-text-color);
+    border: 0;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: inherit;
+    padding: 8px 30px;
+    margin: 5px;
+    font-size: 14px;
+}
+
+.btn:active {
+    transform: scale(.98);
+}
+
+.btn:focus {
+    outline: none;
+}
+
+.btn:disabled {
+    background-color: var(--step-incomplete);
+    cursor: not-allowed;
+}
