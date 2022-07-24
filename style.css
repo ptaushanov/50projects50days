@@ -18,18 +18,18 @@ body {
 
 a {
     color: #333366;
-    text-decoration:none;
+    text-decoration: none;
 }
 
 a:visited {
     color: #6666aa;
 }
 
-a::after {
+a[href]::after {
     content: ' 🔗';
 }
 
-ol li{
+ol li {
     line-height: 1.8;
 }
 
@@ -38,17 +38,17 @@ ol li{
     display: flex;
 }
 
-.hero h1{
+.hero h1 {
     font-size: 28px;
     margin: 8px 0;
 }
 
-.hero h1::first-letter{
+.hero h1::first-letter {
     font-size: 32px;
     font-weight: bolder;
 }
 
-.hero h3{
+.hero h3 {
     margin: 8px 0 16px 0;
     font-weight: 500;
 }
@@ -59,7 +59,8 @@ ol li{
     width: 64px;
 }
 
-.content, .hero {
+.content,
+.hero {
     padding-left: 20px;
     padding-right: 20px;
 }
@@ -76,7 +77,7 @@ ol li{
     margin: 0;
 }
 
-@media (max-width: 1024px ) {
+@media (max-width: 1024px) {
     .container {
         flex-direction: column;
     }
