@@ -19,6 +19,7 @@ body {
     margin-bottom: 40px;
 }
 
+
 h1 {
     margin: 10px 0 0;
 }
@@ -26,6 +27,21 @@ h1 {
 h3 {
     font-weight: 400;
     margin: 10px 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cups-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 280px;
+    padding: 10px;
 }
 
 .cup {
@@ -109,4 +125,10 @@ h3 {
 .text {
     text-align: center;
     margin: 0 0 10px;
+}
+
+@media(max-width: 480px) {
+    .container {
+        flex-direction: column;
+    }
 }
