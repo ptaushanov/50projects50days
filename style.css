@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: #ebeff5;
+    background-color: #f8fafc;
     font-family: "Roboto Mono", monospace;
     display: flex;
     flex-direction: column;
@@ -68,7 +68,7 @@ ol li {
 }
 
 .content {
-    background-color: #fcfcfd;
+    background-color: #ffffff;
     box-shadow: 0 0 10px 2px rgba(100, 100, 100, 0.1);
     overflow-y: scroll;
     height: 85vh;
